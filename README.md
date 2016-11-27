@@ -31,4 +31,4 @@ describe('expect-promise', () => {
 });
 ```
 
-**Note!** Since Promises are an asynchronous feature, `toHaveBeenResolved` and `toHaveBeenRejected` expect the `done` callback that is passed as an argument to `it`.
+**Note!** Since Promises are an asynchronous feature, `toHaveBeenResolved` and `toHaveBeenRejected` expect the `done` callback that is passed as an argument to `it`. This callback will be called with an error when the promise is resolved or rejected, which will pass or fail the test for [asynchronous code in mocha](https://mochajs.org/#asynchronous-code).
